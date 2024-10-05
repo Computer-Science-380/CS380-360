@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  background-color: #1c1c1c; /* Fondo oscuro: puedes elegir el tono que prefieras */
+  color: #ffffff; /* Cambiar el color del texto a blanco para mejor contraste */
+  min-height: 100vh; /* Para asegurar que el fondo cubra toda la altura de la página */
+  padding: 20px; /* Añadir un poco de espacio interno */
 }
 
+/* Mantén el resto del archivo igual */
 .App-logo {
   height: 40vmin;
   pointer-events: none;

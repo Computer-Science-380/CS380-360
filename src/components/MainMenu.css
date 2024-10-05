@@ -1,0 +1,95 @@
+/* src/components/MainMenu.css */
+
+.main-menu {
+    text-align: center;
+    margin-top: 50px;
+    color: #00ff00; /* Verde neón */
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo terminal */
+}
+
+.main-menu h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ff00; /* Efecto de brillo */
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-button {
+    padding: 20px;
+    width: 180px; /* Ancho ajustado */
+    height: 120px; /* Altura ajustada */
+    background-color: #111; /* Fondo oscuro */
+    border: 2px solid #00ff00; /* Borde verde */
+    color: #00ff00; /* Texto verde */
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ff00;
+    border-radius: 15px; /* Bordes redondeados para un aspecto moderno */
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 255, 0, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.menu-button:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.menu-button:hover {
+    color: #00ff00; /* Mantener el texto verde */
+    text-shadow: none; /* Quitar el efecto borroso del texto al hacer hover */
+    box-shadow: 0 0 30px #00ff00; /* Efecto de resplandor */
+}
+
+.highlight {
+    background-color: #222; /* Fondo oscuro pero diferente para destacar */
+    border: 2px solid #ffcc00; /* Borde diferente para el botón destacado */
+    text-shadow: 0 0 5px #ffcc00;
+    border-radius: 15px; /* Bordes redondeados */
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 204, 0, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.highlight:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.highlight:hover {
+    color: #ffcc00; /* Mantener el texto amarillo */
+    text-shadow: none; /* Quitar el efecto borroso del texto al hacer hover */
+    box-shadow: 0 0 30px #ffcc00; /* Efecto de resplandor */
+}
