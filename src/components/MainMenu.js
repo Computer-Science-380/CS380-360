@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainMenu.css'; // Creamos un archivo CSS separado para el estilo
+import './MainMenu.css'; 
 
 const MainMenu = () => {
     return (

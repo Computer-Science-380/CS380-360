@@ -8,7 +8,7 @@
 
 body {
   font-family: Lato, Helvetica, Arial, sans-serif;
-  background: #111; /* Fondo oscuro para que coincida con el estilo */
+  background: #111; /* Dark background to match the style */
 }
 
 a {
@@ -20,11 +20,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111; /* Fondo oscuro, igual que los botones */
-  color: #00ff00; /* Verde neón */
+  background-color: #111;
+  color: #00ff00; /* Neon green */
   padding: 1rem 2rem;
-  border-radius: 15px; /* Bordes redondeados para un estilo moderno */
-  box-shadow: 0 0 15px #00ff00; /* Resplandor verde alrededor del navbar */
+  border-radius: 15px; /* Rounded borders for a modern look */
+  box-shadow: 0 0 15px #00ff00; /* Green glow around the navbar */
 }
 
 .nav-wrapper {
@@ -36,14 +36,14 @@ nav {
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00ff00; /* Color verde neón para el logo */
-  text-shadow: 0 0 5px #00ff00; /* Efecto de brillo en el logo */
+  color: #00ff00; /* Neon green for the logo */
+  text-shadow: 0 0 5px #00ff00; /* Glow effect on the logo */
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .logo a:hover {
-  color: #fff; /* Cambiar a blanco al pasar el cursor */
-  text-shadow: none; /* Eliminar el brillo para que se vea claro */
+  color: #fff; /* Change to white on hover */
+  text-shadow: none; /* Remove glow for clarity */
 }
 
 ul {
@@ -56,18 +56,18 @@ ul li {
 }
 
 ul li a {
-  color: #00ff00; /* Verde neón */
-  font-family: 'Courier New', Courier, monospace; /* Fuente tipo terminal */
+  color: #00ff00; /* Neon green */
+  font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
   font-size: 1.2rem;
   transition: all 0.3s ease;
-  text-shadow: 0 0 5px #00ff00; /* Efecto de brillo en los enlaces */
-  padding: 5px 10px; /* Añadir algo de padding para destacar */
-  border-radius: 10px; /* Redondear los bordes del fondo del enlace */
+  text-shadow: 0 0 5px #00ff00; /* Glow effect on links */
+  padding: 5px 10px; /* Add padding for emphasis */
+  border-radius: 10px; /* Rounded link background */
 }
 
 ul li a:hover {
-  color: #111; /* Cambiar el color del texto a oscuro al pasar el cursor */
-  text-shadow: none; /* Mantener el texto nítido */
-  box-shadow: 0 0 20px #00ff00; /* Efecto de resplandor al pasar el cursor */
-  background-color: #00ff00; /* Fondo verde brillante al pasar el cursor */
+  color: #111; /* Change text color to dark on hover */
+  text-shadow: none; /* Keep text clear */
+  box-shadow: 0 0 20px #00ff00; /* Glow effect on hover */
+  background-color: #00ff00; /* Bright green background on hover */
 }

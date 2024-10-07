@@ -3,14 +3,14 @@
 .main-menu {
     text-align: center;
     margin-top: 50px;
-    color: #00ff00; /* Verde neón */
-    font-family: 'Courier New', Courier, monospace; /* Fuente tipo terminal */
+    color: #00ff00; /* Neon green */
+    font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
 }
 
 .main-menu h1 {
     margin-bottom: 40px;
     font-size: 2.5rem;
-    text-shadow: 0 0 10px #00ff00; /* Efecto de brillo */
+    text-shadow: 0 0 10px #00ff00; /* Glow effect */
 }
 
 .menu-buttons {
@@ -22,17 +22,17 @@
 
 .menu-button {
     padding: 20px;
-    width: 180px; /* Ancho ajustado */
-    height: 120px; /* Altura ajustada */
-    background-color: #111; /* Fondo oscuro */
-    border: 2px solid #00ff00; /* Borde verde */
-    color: #00ff00; /* Texto verde */
+    width: 180px;
+    height: 120px;
+    background-color: #111; /* Dark background */
+    border: 2px solid #00ff00; /* Green border */
+    color: #00ff00; /* Green text */
     font-size: 1.2rem;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     transition: all 0.3s ease;
     text-shadow: 0 0 5px #00ff00;
-    border-radius: 15px; /* Bordes redondeados para un aspecto moderno */
+    border-radius: 15px; /* Rounded borders */
     position: relative;
     overflow: hidden;
 }
@@ -56,16 +56,16 @@
 }
 
 .menu-button:hover {
-    color: #00ff00; /* Mantener el texto verde */
-    text-shadow: none; /* Quitar el efecto borroso del texto al hacer hover */
-    box-shadow: 0 0 30px #00ff00; /* Efecto de resplandor */
+    color: #00ff00; /* Keep the text green */
+    text-shadow: none;
+    box-shadow: 0 0 30px #00ff00; /* Glow effect */
 }
 
 .highlight {
-    background-color: #222; /* Fondo oscuro pero diferente para destacar */
-    border: 2px solid #ffcc00; /* Borde diferente para el botón destacado */
+    background-color: #222; /* Dark background but different to highlight */
+    border: 2px solid #ffcc00; /* Different border for highlighted button */
     text-shadow: 0 0 5px #ffcc00;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
 }
@@ -89,7 +89,7 @@
 }
 
 .highlight:hover {
-    color: #ffcc00; /* Mantener el texto amarillo */
-    text-shadow: none; /* Quitar el efecto borroso del texto al hacer hover */
-    box-shadow: 0 0 30px #ffcc00; /* Efecto de resplandor */
+    color: #ffcc00; /* Keep the text yellow */
+    text-shadow: none;
+    box-shadow: 0 0 30px #ffcc00; /* Glow effect */
 }

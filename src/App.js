@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import MainMenu from './components/MainMenu';
 import './App.css';
 
-// Crear un componente App con la estructura básica
 function App() {
   return (
     <Router>

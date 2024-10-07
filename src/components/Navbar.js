@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 import React, { Component } from 'react';
-import './Navbar.css'; // Creamos este archivo para los estilos
+import './Navbar.css'; // Import the CSS for styling
 
 class Navbar extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Navbar extends Component {
         <div className="nav-wrapper">
           {/* Navbar Logo */}
           <div className="logo">
-            {/* Pueden cambiar "LOGO" por una imagen o texto personalizado */}
+            {/* Replace "LOGO" with an image or custom text if desired */}
             <a href="#home">LOGO</a>
           </div>
           
