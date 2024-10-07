@@ -1,6 +1,6 @@
 from flask import render_template, request
 from . import create_app
-from ciphers import vigenere, bacon, caesar, morse, nihilist, universal_decryptor
+from CIPHERS import vigenere, bacon, caesar, morse, nihilist, universal_decryptor
 
 app = create_app()
 
