@@ -9,7 +9,7 @@ const MainMenu = () => {
                 <button className="menu-button">Word Search</button>
                 <button className="menu-button">Substitution Cipher</button>
                 <button className="menu-button">Unscrambler</button>
-                <button className="menu-button highlight">Encrypt a Message</button>
+                <button className="menu-button">Encrypt a Message</button>
             </div>
         </div>
     );
