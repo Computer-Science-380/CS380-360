@@ -38,10 +38,10 @@ const MainMenu = () => {
       <h1 className="title">What would you like to do?</h1>
       <div className="menu-buttons">
         <button className="menu-button" onClick={() => navigate('/bacon')}>
-          <span>BACON</span>
+          <span>BACON CIPHER</span>
         </button>
         <button className="menu-button">
-          <span>Substitution Cipher</span>
+          <span>MORSE CIPHER</span>
         </button>
         <button className="menu-button">
           <span>Unscrambler</span>

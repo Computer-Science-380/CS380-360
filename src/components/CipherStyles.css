@@ -52,3 +52,9 @@
     margin-top: 20px;
   }
   
+  .encoded-message {
+    color: #FFFF66; /* Puedes cambiar este valor a cualquiera de las sugerencias */
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center; /* Centrar el texto */
+  }

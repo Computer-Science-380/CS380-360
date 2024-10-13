@@ -25,8 +25,8 @@ const BaconCipher = () => {
       {/* Contenedor para centrar el botón */}
       <div className="cipher-button-container">
         <button className="cipher-button" onClick={encodeBaconCipher}>Encode</button>
-      </div>
-      {encodedText && <p>Encoded Message: {encodedText}</p>}
+      </div >
+      {encodedText && <p className='encoded-message'>Encoded Message: {encodedText}</p>}
     </div>
   );
 };
