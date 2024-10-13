@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import React, { useEffect } from 'react';
 import './MainMenu.css';
 
 const MainMenu = () => {
+  const navigate = useNavigate(); // Inicializa useNavigate aquí
+
   // Función para agregar y eliminar la clase glitch
   useEffect(() => {
     const buttons = document.querySelectorAll('.menu-button span'); // Selecciona todos los spans de los botones
@@ -32,9 +35,9 @@ const MainMenu = () => {
 
   return (
     <div className="main-menu">
-      <h1>What would you like to do?</h1>
+      <h1 className="title">What would you like to do?</h1>
       <div className="menu-buttons">
-        <button className="menu-button">
+        <button className="menu-button" onClick={() => navigate('/bacon')}>
           <span>BACON</span>
         </button>
         <button className="menu-button">

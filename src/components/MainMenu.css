@@ -1,13 +1,11 @@
 /* src/components/MainMenu.css */
 
-.main-menu {
+.title {
     text-align: center;
     margin-top: 50px;
     color: #00ff00; /* Neon green */
     font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
-}
 
-.main-menu h1 {
     margin-bottom: 40px;
     font-size: 2.5rem;
     text-shadow: 0 0 10px #00ff00; /* Glow effect */
