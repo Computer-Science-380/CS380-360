@@ -43,3 +43,12 @@ NEFI = nihilist
 LADY = vigenere
 SETH = CAESAR
 GUSTAVO / SOMEONE ELSE WHO CAN HELP = FRONT END (JS, CSS (OR TAILWIND))
+
+
+
+
+
+ 1  -  2 - 3 -  4 -  5
+ 6 -   7 - 8 -  9 -  10 
+ 11 - 12 - 13 - 14 - 15
+ 16
