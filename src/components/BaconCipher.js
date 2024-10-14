@@ -9,7 +9,7 @@ const BaconCipher = () => {
   const encodeBaconCipher = () => {
     // Aquí puedes agregar la lógica de cifrado Bacon que desees
     setEncodedText(`Encoded version of: ${inputText}`);
-  };
+  };  
 
   return (
     <div className="cipher-container">

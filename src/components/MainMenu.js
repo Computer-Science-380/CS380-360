@@ -40,7 +40,7 @@ const MainMenu = () => {
         <button className="menu-button" onClick={() => navigate('/bacon')}>
           <span>BACON CIPHER</span>
         </button>
-        <button className="menu-button">
+        <button className="menu-button" onClick={() => navigate('/morse')}>
           <span>MORSE CIPHER</span>
         </button>
         <button className="menu-button">
