@@ -19,7 +19,7 @@ morseCode = { 'A':'.-', 'B':'-...',
 
 class Morse(Cipher):
     def __init__(self,message):
-        selt.message=message
+        self.message=message
 
     def encrypt(self):
         encrypted=""
@@ -32,13 +32,13 @@ class Morse(Cipher):
         return encrypted
 
 
-'''while True:
+while True:
     print("Hi, this is a program for morse code")
     message=input("Please enter the message you want to translate ")
 
-    print(f"The encrypted message is:\n{encrypt(message)}")
+    print(f"The encrypted message is:\n{Morse(message).encrypt()}")
 
     answer=input("Do you want to play again? (Y/N)")
     if(answer.lower()=="n"):
-        break'''
+        break
 
