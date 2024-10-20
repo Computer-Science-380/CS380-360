@@ -7,6 +7,8 @@
   import BaconCipher from './components/BaconCipher'; // Importa el componente BaconCipher
   import './App.css';
   import MorseCipher from './components/MorseCipher';
+  import EncryptPage from './components/EncryptPage';
+  import DecryptPage from './components/DecryptPage';
 
   function App() {
     return (
@@ -16,8 +18,8 @@
           <Navbar />
           <Routes>
             <Route path="/" element={<MainMenu />} />
-            <Route path="/bacon" element={<BaconCipher />} /> {/* Ruta para BaconCipher */} 
-            <Route path="/morse" element={<MorseCipher />} /> {/* Ruta para MorseCipher */}
+            <Route path="/encrypt" element={<EncryptPage />} /> {/* Ruta para BaconCipher */} 
+            <Route path="/decrypt" element={<DecryptPage />} /> {/* Ruta para MorseCipher */}
             <Route path="/about" element={<div>About Page</div>} />
           </Routes>
         </div>

@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import React, { useEffect } from 'react';
-import './MainMenu.css';
+import './CipherMenu.css';
 
-const MainMenu = () => {
+const CipherMenu = () => {
   const navigate = useNavigate(); // Inicializa useNavigate aquí
 
   // Función para agregar y eliminar la clase glitch
   useEffect(() => {
-    const buttons = document.querySelectorAll('.menu-button span'); // Selecciona todos los spans de los botones
+    const buttons = document.querySelectorAll('.cipher-menu-button span'); // Selecciona todos los spans de los botones
 
     const applyGlitch = () => {
       buttons.forEach((button) => {
@@ -36,17 +36,22 @@ const MainMenu = () => {
   return (
     <div className="main-menu">
       <h1 className="title">What would you like to do?</h1>
-      <div className="menu-buttons">
-        {/* Only the Encrypt and Decrypt options are now shown */}
-        <button className="menu-button" onClick={() => navigate('/encrypt')}>
-          <span>Encrypt</span>
+      <div className="cipher-menu-buttons">
+        <button className="cipher-menu-button" onClick={() => navigate('/bacon')}>
+          <span>BACON</span>
         </button>
-        <button className="menu-button" onClick={() => navigate('/decrypt')}>
-          <span>DECRYPT</span>
+        <button className="cipher-menu-button" onClick={() => navigate('/morse')}>
+          <span>MORSE</span>
+        </button>
+        <button className="cipher-menu-button">
+          <span>CEASAR</span>
+        </button>
+        <button className="cipher-menu-button">
+          <span>NIHILIST</span>
         </button>
       </div>
     </div>
   );
 };
 
-export default MainMenu;
+export default CipherMenu;
