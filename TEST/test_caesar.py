@@ -15,8 +15,8 @@ class TestCaesarDecryption(unittest.TestCase):
     def test_caesar_decrypt(self):
         result = caesar.decrypt(caesar,"khOoR zru1og!",3)
         self.assertEqual(result,"hello wor1ld!")
-    def test_caesar_decrypt(self):
+    def test_caesar_decrypt2(self):
         result = caesar.decrypt(caesar,"lipps asvph!",4)
         self.assertEqual(result,"hello world!")
-        
+
 
