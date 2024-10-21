@@ -32,7 +32,7 @@ class Morse(Cipher):
         return encrypted
 
 
-while True:
+"""while True:
     print("Hi, this is a program for morse code")
     message=input("Please enter the message you want to translate ")
 
@@ -40,5 +40,5 @@ while True:
 
     answer=input("Do you want to play again? (Y/N)")
     if(answer.lower()=="n"):
-        break
+        break"""
 
