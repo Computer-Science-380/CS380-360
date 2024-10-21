@@ -17,28 +17,46 @@ class BaconCipher:
         )
         return encoded_message.strip()
 
-
-# # Menu for Bacon Cipher message 
-# def main():
-#     bacon_cipher = BaconCipher()
+    # Decode a Bacon Cipher message
+    def decode(self, encoded_message):
+        decoded_message = ''
+        bacon_sequences = encoded_message.split()
+        for sequence in bacon_sequences:
+            for key, value in self.bacon_cipher.items():
+                if sequence == value:
+                    decoded_message += key
+        return decoded_message
     
-#     while True:
-#         print("Choose an option:")
-#         print("1. Encode a message")
-#         print("2. Quit")
+    #Scramble the Bacon Cipher
+    
+
+# Menu for Bacon Cipher message
+def main():
+    bacon_cipher = BaconCipher()
+    
+    while True:
+        print("Choose an option:")
+        print("1. Encode a message")
+        print("2. Decode a message")
+        print("3. Quit")
         
-#         choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ")
         
-#         if choice == "1":
-#             message = input("Enter the message to encode: ")
-#             encoded_message = bacon_cipher.encode(message)  # Change from encoded to encode
-#             print(f"Encoded message: {encoded_message}")
+        if choice == "1":
+            message = input("Enter the message to encode: ")
+            encoded_message = bacon_cipher.encode(message)
+            print(f"Encoded message: {encoded_message}")
         
-#         elif choice == "2":
-#             print("Goodbye!")
-#             break
-#         else:
-#             print("Invalid choice. Please try again.")
+        elif choice == "2":
+            encoded_message = input("Enter the message to decode: ")
+            decoded_message = bacon_cipher.decode(encoded_message)
+            print(f"Decoded message: {decoded_message}")
+            
+        elif choice == "3":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
                 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
