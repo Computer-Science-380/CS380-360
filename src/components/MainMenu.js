@@ -37,7 +37,6 @@ const MainMenu = () => {
     <div className="main-menu">
       <h1 className="title">What would you like to do?</h1>
       <div className="menu-buttons">
-        {/* Only the Encrypt and Decrypt options are now shown */}
         <button className="menu-button" onClick={() => navigate('/encrypt')}>
           <span>Encrypt</span>
         </button>
