@@ -1,3 +1,5 @@
+from cipher_SuperClass import Cipher
+
 morseCode = { 'A':'.-', 'B':'-...',
                     'C':'-.-.', 'D':'-..', 'E':'.',
                     'F':'..-.', 'G':'--.', 'H':'....',
@@ -15,22 +17,31 @@ morseCode = { 'A':'.-', 'B':'-...',
                     '(':'-.--.', ')':'-.--.-'}
 
 
-#print(morseCode["H"])
-def encrypt(message):
-    encrypted=""
-    for letter in message:
-        if(letter!=" "):
-            encrypted+=morseCode[letter.upper()]+"|"
-        else:
-            encrypted+=" "
-    encrypted=encrypted[:-1]
-    return encrypted
+class Morse(Cipher):
+    def __init__(self,message):
+        self.message=message
+
+    def encrypt(self):
+        encrypted=""
+        for letter in self.message:
+            if(letter!=" "):
+                encrypted+=morseCode[letter.upper()]+"|"
+            else:
+                encrypted+=" "
+        encrypted=encrypted[:-1]
+        return encrypted
+    
+    
+    
+
+    
+
 
 while True:
     print("Hi, this is a program for morse code")
     message=input("Please enter the message you want to translate ")
 
-    print(f"The encrypted message is:\n{encrypt(message)}")
+    print(f"The encrypted message is:\n{Morse(message).encrypt()}")
 
     answer=input("Do you want to play again? (Y/N)")
     if(answer.lower()=="n"):

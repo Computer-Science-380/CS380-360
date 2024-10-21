@@ -1,4 +1,4 @@
-from abc import ABC, abstractmehtod, abstractmethod
+from abc import ABC, abstractmethod
 
 ## THIS IS AN ABSTRACT CLASS
 ## MEANING THAT THIS METHOD WILL BE USED IN EVERY CIPHER SINCE WE KNOW THAT 
@@ -6,7 +6,7 @@ from abc import ABC, abstractmehtod, abstractmethod
 
 class Cipher (ABC) : 
     @abstractmethod
-    def encrypt(self, plaintext: str) -> str : 
+    def encrypt(self, string) : 
         pass
     
     
