@@ -1,5 +1,6 @@
 import unittest
 import caesar
+#from app.CIPHERS.caesar import caesar
 
 class TestCaesarEncryption(unittest.TestCase):
 
@@ -9,6 +10,9 @@ class TestCaesarEncryption(unittest.TestCase):
     def test_caesar_encrypt2(self):
         result = caesar.encrypt(caesar,"1Hello World!",4)
         self.assertEqual(result,"1lipps asvph!")
+    def test_caesar_encrypt2(self):
+        result = caesar.encrypt(caesar,"Hello World!",3)
+        self.assertEqual(result,"khoorzruog")
 
 class TestCaesarDecryption(unittest.TestCase):
     
