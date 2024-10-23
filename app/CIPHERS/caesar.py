@@ -2,44 +2,51 @@ from cipher_SuperClass import Cipher
 
 class caesar(Cipher):
     
-    def encrypt(self, userInput, key: int):
-        codeTxt: str = ""
-        plainTxt = [char for char in userInput.lower()]
-        
-        #print(plainTxt)
+    def encrypt(self, plainTxt, key: int):
+        codeTxt = ""
 
-        #Loop through elements of plainTxt
-        pIndex = 0
-        for element in plainTxt[0:len(plainTxt):1]:
-            
-            #Loop through alphabet to get letter index int
-            alphabet = "abcdefghijklmnopqrstuvwxyz"
-            aIndex = 0
+        alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-            for letter in alphabet[0:len(alphabet):1]:
-                if element == letter:
-                    #change char in plainTxt
-                    codeTxt += alphabet[aIndex+key]
-                    break
-                    
+        for plainChar in plainTxt:
+            #print(codeChar)
 
-                aIndex += 1
-                if aIndex > len(alphabet):
-                    aIndex = 0
-                    codeTxt += plainTxt[pIndex]
+            isLetter = False
+            for i, item in enumerate(alphabet):
+                if plainChar == alphabet[i]:
+                    codeTxt += alphabet[i+key]
+                    isLetter = True
 
-            #print(plainTxt[pIndex])
-            #print(codeTxt)
+            if isLetter == False:
+                codeTxt += plainChar
 
-        pIndex += 1
-        if pIndex > len(plainTxt):
-            pIndex = 0
+        return (codeTxt)
+    
 
-        return codeTxt
+    def decrypt(self, codeTxt, key):
+        plainTxt = ""
+
+        alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+        for codeChar in codeTxt:
+            #print(codeChar)
+
+            isLetter = False
+            for i, item in enumerate(alphabet):
+                if codeChar == alphabet[i]:
+                    plainTxt += alphabet[i-key]
+                    isLetter = True
+
+            if isLetter == False:
+                plainTxt += codeChar
+
+        return (plainTxt)
 
 
 
 #Manual Test Caesar Cipher  
+"""
 print()
 print()
 print(caesar.encrypt(caesar,"Hello World!", 3))
+print(caesar.decrypt(caesar, "Khoor Zruog!", 3))
+"""
