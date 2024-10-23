@@ -1,0 +1,73 @@
+/* src/components/Navbar.css */
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  background: #111; /* Dark background to match the style */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #00ff00; /* Neon green */
+  padding: 1rem 2rem;
+  border-radius: 15px; /* Rounded borders for a modern look */
+  box-shadow: 0 0 15px #00ff00; /* Green glow around the navbar */
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ff00; /* Neon green for the logo */
+  text-shadow: 0 0 5px #00ff00; /* Glow effect on the logo */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo a:hover {
+  color: #fff; /* Change to white on hover */
+  text-shadow: none; /* Remove glow for clarity */
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0 1rem;
+}
+
+ul li a {
+  color: #00ff00; /* Neon green */
+  font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #00ff00; /* Glow effect on links */
+  padding: 5px 10px; /* Add padding for emphasis */
+  border-radius: 10px; /* Rounded link background */
+}
+
+ul li a:hover {
+  color: #111; /* Change text color to dark on hover */
+  text-shadow: none; /* Keep text clear */
+  box-shadow: 0 0 20px #00ff00; /* Glow effect on hover */
+  background-color: #00ff00; /* Bright green background on hover */
+}

@@ -1,0 +1,12 @@
+This is an interface , 
+Since python does not have a way of doing interface like java 
+we are going to use an abstract class, for us all to know which types of methods
+we are going to use. 
+
+Please study what abstract classes are if you do not know, but in resume it only means that 
+the methods in the cipher_SuperClass , have to be implemented in the childs, meaning all the 
+ciphers. 
+This is meant for organization purposes.
+
+Also I will be reading comments or things that need to be addresses here ,
+If you have any comments you can tag @trujillonefi12 like This

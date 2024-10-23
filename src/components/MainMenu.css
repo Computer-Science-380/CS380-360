@@ -1,0 +1,130 @@
+/* src/components/MainMenu.css */
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    color: #00ff00; /* Neon green */
+    font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
+
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ff00; /* Glow effect */
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-button {
+    padding: 20px;
+    width: 180px;
+    height: 120px;
+    background-color: #111;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transición suave para cuando se agrande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glitch-active {
+  animation: glitch 0.3s steps(2, end); /* Aplica glitch solo durante 300ms */
+}   
+
+.menu-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 255, 0, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+
+
+.menu-button:hover {
+    transform: scale(1.05); /* Solo agranda el botón, sin interrumpir el glitch */
+}
+
+.highlight {
+    background-color: #222; /* Dark background but different to highlight */
+    border: 2px solid #00ff00; /* Different border for highlighted button */
+    text-shadow: 0 0 5px #00ff00;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;   
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 255, 0, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.highlight:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.highlight:hover {
+    color: #ffcc00; /* Keep the text yellow */
+    text-shadow: none;
+    box-shadow: 0 0 30px #ffcc00; /* Glow effect */
+}
+
+.glitch-active {
+    animation: glitch 0.3s steps(2, end); /* Aplica glitch solo durante 300ms */
+  }
+  
+  @keyframes glitch {
+      0% {
+          text-shadow: none;
+          transform: none;
+      }
+      20% {
+          text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+          transform: skew(5deg);
+      }
+      40% {
+          text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff;
+          transform: skew(-5deg);
+      }
+      60% {
+          text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff;
+          transform: skew(5deg);
+      }
+      80% {
+          text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff;
+          transform: skew(-5deg);
+      }
+      100% {
+          text-shadow: none;
+          transform: none;
+      }
+  }
+
+@keyframes grow {
+    to {
+      transform: scale(1.05); /* El botón se agranda ligeramente */
+    }
+}
