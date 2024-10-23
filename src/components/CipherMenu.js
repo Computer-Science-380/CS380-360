@@ -11,7 +11,7 @@ const CipherMenu = () => {
 
     const applyGlitch = () => {
       buttons.forEach((button) => {
-        button.classList.add('glitch-active'); // Añadir clase de glitch
+        button.classList.add('glitch-active'); 
       });
 
       // Después de un tiempo (300ms), eliminamos la clase de glitch
@@ -24,12 +24,11 @@ const CipherMenu = () => {
 
     // Función que ejecuta el glitch de manera aleatoria entre 0 y 4 segundos
     const randomIntervalGlitch = () => {
-      applyGlitch(); // Aplica el efecto
-      const randomTime = Math.random() * 4000; // Genera un intervalo entre 0 y 4 segundos
-      setTimeout(randomIntervalGlitch, randomTime); // Programa la siguiente ejecución de manera aleatoria
+      applyGlitch();
+      const randomTime = Math.random() * 4000;
+      setTimeout(randomIntervalGlitch, randomTime); 
     };
 
-    // Iniciar el ciclo de glitch aleatorio
     randomIntervalGlitch();
   }, []);
 
@@ -37,16 +36,16 @@ const CipherMenu = () => {
     <div className="main-menu">
       <h1 className="title">What would you like to do?</h1>
       <div className="cipher-menu-buttons">
-        <button className="cipher-menu-button" onClick={() => navigate('/bacon')}>
+        <button className="cipher-menu-button" > 
           <span>BACON</span>
         </button>
-        <button className="cipher-menu-button" onClick={() => navigate('/morse')}>
+        <button className="cipher-menu-button" >
           <span>MORSE</span>
         </button>
-        <button className="cipher-menu-button">
+        <button className="cipher-menu-button" >
           <span>CEASAR</span>
         </button>
-        <button className="cipher-menu-button">
+        <button className="cipher-menu-button" >
           <span>NIHILIST</span>
         </button>
       </div>
