@@ -26,7 +26,7 @@ class Morse(Cipher):
             return self.message
         
         encrypted = ""
-        for index, letter in enumerate(self.message):
+        for letter in enumerate(self.message):
             if letter == " ":
                 # Replace last character (if it's "|") with a space
                 if encrypted.endswith("|"):
