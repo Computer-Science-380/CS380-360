@@ -24,19 +24,19 @@ class MorseDecrypt(Cipher):
 
             #Beginning of if statement
             if symbol == "|":
-                key = self.keyFinder(word)
-                if key is None:
-                    return "Character not found"
-                decrypted += key
-                word = ""
+                if word:
+                    key = self.keyFinder(word)
+                    if key is None:
+                        return "Character not found"
+                    decrypted += key
+                    word = ""
             elif symbol == " ":
                 if word:
                    key = self.keyFinder(word)
                    if key is None:
-                     return "Character not found"
-                decrypted += key
-                word = ""
-                decrypted += " "
+                        return "Character not found"
+                   decrypted += key+" "
+                   word = ""
             else:
                 word += symbol 
             i += 1
