@@ -1,0 +1,11 @@
+/* src/components/MatrixEffect.css */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía el canvas al fondo */
+    background-color: black; /* Fondo negro para resaltar el efecto */
+  }
+  
