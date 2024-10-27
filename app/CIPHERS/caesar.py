@@ -40,6 +40,14 @@ class caesar(Cipher):
                 plainTxt += codeChar
 
         return (plainTxt)
+    
+
+    def bruteDecrypt(self, userInput):
+        plainTxt = userInput.lower()
+        wordBank = open("")
+        print(wordBank.read())
+
+        return userInput
 
 
 
@@ -50,3 +58,4 @@ print()
 print(caesar.encrypt(caesar,"Hello World!", 3))
 print(caesar.decrypt(caesar, "Khoor Zruog!", 3))
 """
+caesar.bruteDecrypt(caesar,"")
