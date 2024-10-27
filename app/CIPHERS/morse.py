@@ -18,21 +18,30 @@ morseCode = { 'A':'.-', 'B':'-...',
 
 
 class Morse(Cipher):
-    def __init__(self,message):
-        self.message=message
+    def __init__(self, message):
+        self.message = message
 
     def encrypt(self):
-        encrypted=""
-        for letter in self.message:
-            if(letter!=" "):
-                encrypted+=morseCode[letter.upper()]+"|"
+        if self.message == "" or self.message==" ":
+            return self.message
+        
+        encrypted = ""
+        for letter in enumerate(self.message):
+            if letter == " ":
+                # Replace last character (if it's "|") with a space
+                if encrypted.endswith("|"):
+                    encrypted = encrypted[:-1] + " "
             else:
-                encrypted+=" "
-        encrypted=encrypted[:-1]
+                # Check if character is in morseCode, otherwise raise error
+                if letter.upper() not in morseCode:
+                    raise ValueError(f"Illegal argument: '{letter}' does not exist in Morse code.")
+                encrypted += morseCode[letter.upper()] + "|"
+        
+        # Remove trailing "|" if it exists
+        if encrypted.endswith("|"):
+            encrypted = encrypted[:-1]
+        
         return encrypted
-    
-    
-    
 
     
 
