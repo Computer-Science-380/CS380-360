@@ -1,4 +1,4 @@
-from app.CIPHERS.nihilist import NihilistCipher
+from .nihilist import NihilistCipher
 
 
 class CipherManager:

@@ -1,4 +1,5 @@
-from app.CIPHERS.cipher_SuperClass import Cipher
+from .cipher_SuperClass import Cipher
+
 
 class NihilistCipher(Cipher):
     def __init__(self, keyword):
@@ -9,15 +10,21 @@ class NihilistCipher(Cipher):
     def prepare_keyword(self, keyword):
         # Remove non-alphabet characters and replace J with I
         prepared_keyword = keyword.upper().replace("J", "I")
-        prepared_keyword = "".join(filter(lambda x: x in "ABCDEFGHIKLMNOPQRSTUVWXYZ", prepared_keyword))
-        
+        prepared_keyword = "".join(
+            filter(lambda x: x in "ABCDEFGHIKLMNOPQRSTUVWXYZ", prepared_keyword)
+        )
+
         if not prepared_keyword:
-            raise ValueError("Keyword must contain valid letters from A-Z (excluding J).")
-        
+            raise ValueError(
+                "Keyword must contain valid letters from A-Z (excluding J)."
+            )
+
         return prepared_keyword
 
     def create_grid(self):
-        alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"  # Polybius alphabet (J is combined with I)
+        alphabet = (
+            "ABCDEFGHIKLMNOPQRSTUVWXYZ"  # Polybius alphabet (J is combined with I)
+        )
         used_chars = ""
 
         # Add characters from the keyword first
@@ -38,32 +45,36 @@ class NihilistCipher(Cipher):
         num_mapping = {}
         for i, row in enumerate(self.grid):
             for j, char in enumerate(row):
-                num_mapping[char] = f"{i + 1}{j + 1}"  # Position as a two-digit string (row, column)
+                num_mapping[char] = (
+                    f"{i + 1}{j + 1}"  # Position as a two-digit string (row, column)
+                )
         return num_mapping
 
     def encrypt(self, message):
-    # Prepare the message (remove non-alphabet characters, handle J as I)
+        # Prepare the message (remove non-alphabet characters, handle J as I)
         message = message.upper().replace("J", "I")
         message = "".join(filter(str.isalpha, message))
-        
-        print(f"Prepared message: {message}")  # Debugging output
-    
+
+        ## print(f"Prepared message: {message}")  # Debugging output
+
         # Step 1: Get numerical equivalents of the message using Polybius square
         message_nums = [self.num_mapping[char] for char in message]
-        print(f"Message numbers: {message_nums}")  # Debugging output
-    
+        ##print(f"Message numbers: {message_nums}")  # Debugging output
+
         # Step 2: Generate numerical equivalents for the keyword (repeated)
         keyword_nums = [self.num_mapping[char] for char in self.keyword]
-        keyword_nums = (keyword_nums * (len(message_nums) // len(keyword_nums) + 1))[: len(message_nums)]
-        print(f"Keyword numbers: {keyword_nums}")  # Debugging output
-    
+        keyword_nums = (keyword_nums * (len(message_nums) // len(keyword_nums) + 1))[
+            : len(message_nums)
+        ]
+        ##print(f"Keyword numbers: {keyword_nums}")  # Debugging output
+
         # Step 3: Add the keyword values to the message values (nihilist encryption)
-        encrypted_nums = [str(int(message_nums[i]) + int(keyword_nums[i])) for i in range(len(message_nums))]
-    
-        print(f"Encrypted numbers: {encrypted_nums}")  # Debugging output
-    
+        encrypted_nums = [
+            str(int(message_nums[i]) + int(keyword_nums[i]))
+            for i in range(len(message_nums))
+        ]
+
+        ##print(f"Encrypted numbers: {encrypted_nums}")  # Debugging output
+
         # Return encrypted message as a string of numbers
         return " ".join(encrypted_nums)
-
-        
-        
