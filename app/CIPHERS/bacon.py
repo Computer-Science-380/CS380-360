@@ -41,28 +41,16 @@ class BaconCipher(Cipher):
         )
         return encoded_message.strip()
 
+    # Decode a Bacon Cipher message
+    def decode(self, encoded_message):
+        decoded_message = ''
+        bacon_sequences = encoded_message.split()
+        for sequence in bacon_sequences:
+            for key, value in self.bacon_cipher.items():
+                if sequence == value:
+                    decoded_message += key
+        return decoded_message
+    
+    #Scramble the Bacon Cipher
+    
 
-# # Menu for Bacon Cipher message
-# def main():
-#     bacon_cipher = BaconCipher()
-
-#     while True:
-#         print("Choose an option:")
-#         print("1. Encode a message")
-#         print("2. Quit")
-
-#         choice = input("Enter your choice: ")
-
-#         if choice == "1":
-#             message = input("Enter the message to encode: ")
-#             encoded_message = bacon_cipher.encode(message)  # Change from encoded to encode
-#             print(f"Encoded message: {encoded_message}")
-
-#         elif choice == "2":
-#             print("Goodbye!")
-#             break
-#         else:
-#             print("Invalid choice. Please try again.")
-
-# if __name__ == "__main__":
-#     main()
