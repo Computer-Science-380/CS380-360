@@ -1,13 +1,13 @@
 // src/components/BaconCipher.js
 import React, { useState } from 'react';
-import './CipherStyles.css'; // Asegúrate de tener este archivo para los estilos
+import './CipherStyles.css'; 
 
 const BaconCipher = () => {
   const [inputText, setInputText] = useState('');
   const [encodedText, setEncodedText] = useState('');
 
-  async function encryptMorse(text) {
-    const response = await fetch('http://127.0.0.1:5000/api/morse', {
+  async function encryptBacon(text) {
+    const response = await fetch('http://127.0.0.1:5000/api/bacon', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ const BaconCipher = () => {
 
   const encodeBaconCipher = async () => {
     //setEncodedText(`Encoded version of: ${inputText}`);
-    const result = await encryptMorse(inputText);
+    const result = await encryptBacon(inputText);
     if (result) {
       setEncodedText(result);
     } else {

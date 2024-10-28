@@ -6,6 +6,7 @@ print("API script is running...")
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from ciphers.morse import Morse
+from ciphers.bacon import BaconCipher
 
 ##from ciphers.bacon import encrypt as bacon_encrypt
 ##from ciphers.caesar import encryot as caesar_encrypt
@@ -32,6 +33,25 @@ def encrypt_morse():
     encoded_message = cipher.encrypt()
 
     return jsonify({"result": encoded_message}), 200
+
+
+@app.route("/api/bacon", methods=["POST"])
+def encrypt_bacon():
+    if not request.is_json:
+        return jsonify({"error": "Invalid content type"}), 400
+
+    data = request.get_json()
+
+    if "message" not in data:
+        return jsonify({"error": "Missing message"})
+
+    message = data["message"]
+
+    cipher = BaconCipher(message)
+
+    encodedMessage = cipher.encrypt()
+
+    return jsonify({"result": encodedMessage}), 200
 
 
 if __name__ == "__main__":
